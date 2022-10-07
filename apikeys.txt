@@ -1,0 +1,609 @@
+
+user api:
+
+request POST 'http://127.0.0.1:8000/user/registration' \
+--data-raw '{
+    "email":"sandhya.sri929@gmail.com",
+    "first_name":"sandhya",
+    "last_name":"sri",
+    "password":"Abcd.1234", 
+    "address":"xyxy",
+    "pin_code":521175,
+    "date_of_birth":"07/02/2000",
+    "mobile_number":9121615373,
+    "ardhar_number":15679235846
+}'
+
+--------------------------------------------------------------------------
+{
+  "data": null,
+  "msg": "User registration succesfull !"
+}
+
+
+-----------------------------------------------------------------
+request GET 'http://127.0.0.1:8000/user/registration'
+
+
+    {
+  "data": [
+    {
+      "_id": "633b1996e43dbf11834444ae",
+      "first_name": "sandhya",
+      "last_name": "sri",
+      "password": "$2b$10$Ij9JVh3HeW8irnO1hiGPT.XpdSZl.apSJjjGRljYfHYbi3XFZp9Ma",
+      "address": "xyxy",
+      "pin_code": 521175,
+      "date_of_birth": "2000-02-07T18:30:00.000Z",
+      "mobile_number": 9121615373,
+      "ardhar_number": 15679235846,
+      "created_time": "2022-10-03T17:17:20.958Z",
+      "updated_time": "2022-10-03T17:17:20.958Z",
+      "__v": 0
+    },
+    ],
+  "msg": "Success"
+}
+
+
+------------------------------------------------------------------------
+
+
+curl --location --request POST 'http://127.0.0.1:8000/slots'
+
+{
+  "data": [
+    "10:00",
+    "10:30",
+    "11:00",
+    "11:30",
+    "12:00",
+    "12:30",
+    "13:00",
+    "13:30",
+    "14:00",
+    "14:30",
+    "15:00",
+    "15:30",
+    "16:00",
+    "16:30",
+    "17:00",
+    "17:30",
+    "18:00",
+    "18:30",
+    "19:00",
+    "19:30",
+    "20:00",
+    "20:30",
+    "21:00",
+    "21:30",
+    "22:00",
+    "22:30",
+    "23:00",
+    "23:30",
+    "00:00",
+    "00:30",
+    "01:00",
+    "01:30",
+    "02:00",
+    "02:30",
+    "03:00",
+    "03:30",
+    "04:00",
+    "04:30",
+    "05:00",
+    "05:30",
+    "06:00",
+    "06:30",
+    "07:00",
+    "07:30",
+    "08:00",
+    "08:30",
+    "09:00",
+    "09:30",
+    "10:00",
+    "10:30",
+    "11:00",
+    "11:30",
+    "12:00",
+    "12:30",
+    "13:00",
+    "13:30",
+    "14:00",
+    "14:30",
+    "15:00",
+    "15:30",
+    "16:00",
+    "16:30"
+  ],
+  "msg": "Hello"
+}
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+admin api:
+
+curl --location --request POST 'http://127.0.0.1:8000/user/login' \
+--data-raw '{
+    "password": "Abcd.1234",
+    "mobile_number":9121615373
+}'
+
+------------------------------------------
+{
+  "data": null,
+  "msg": "Login Succesfull !"
+}
+
+-----------------------------------------------
+curl --location --request POST 'http://127.0.0.1:8000/slots' \
+--data-raw '{
+    "slot_date":"11/08/2022" 
+}'
+
+-----------------------------------------------
+
+{
+  "data": null,
+  "msg": "Slots Created!"
+}
+-----------------------------------------------
+
+curl --location --request GET 'http://127.0.0.1:8000/slots'
+
+{
+  "data": [
+    {
+      "_id": "633d7b6e385a98fa4668e739",
+      "slot_date": "2022-11-07T18:30:00.000Z",
+      "total_avaible_slots": 0,
+      "total_booked_slots": 0,
+      "total_slots": 0,
+      "slots": [
+        {
+          "slot_time": "10:00",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e73a"
+        },
+        {
+          "slot_time": "10:30",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e73b"
+        },
+        {
+          "slot_time": "11:00",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e73c"
+        },
+        {
+          "slot_time": "11:30",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e73d"
+        },
+        {
+          "slot_time": "12:00",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e73e"
+        },
+        {
+          "slot_time": "12:30",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e73f"
+        },
+        {
+          "slot_time": "13:00",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e740"
+        },
+        {
+          "slot_time": "13:30",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e741"
+        },
+        {
+          "slot_time": "14:00",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e742"
+        },
+        {
+          "slot_time": "14:30",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e743"
+        },
+        {
+          "slot_time": "15:00",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e744"
+        },
+        {
+          "slot_time": "15:30",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e745"
+        },
+        {
+          "slot_time": "16:00",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e746"
+        },
+        {
+          "slot_time": "16:30",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e747"
+        },
+        {
+          "slot_time": "17:00",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e748"
+        },
+        {
+          "slot_time": "17:30",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e749"
+        },
+        {
+          "slot_time": "18:00",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e74a"
+        },
+        {
+          "slot_time": "18:30",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e74b"
+        },
+        {
+          "slot_time": "19:00",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e74c"
+        },
+        {
+          "slot_time": "19:30",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e74d"
+        },
+        {
+          "slot_time": "20:00",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e74e"
+        },
+        {
+          "slot_time": "20:30",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e74f"
+        },
+        {
+          "slot_time": "21:00",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e750"
+        },
+        {
+          "slot_time": "21:30",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e751"
+        },
+        {
+          "slot_time": "22:00",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e752"
+        },
+        {
+          "slot_time": "22:30",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e753"
+        },
+        {
+          "slot_time": "23:00",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e754"
+        },
+        {
+          "slot_time": "23:30",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e755"
+        },
+        {
+          "slot_time": "00:00",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e756"
+        },
+        {
+          "slot_time": "00:30",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e757"
+        },
+        {
+          "slot_time": "01:00",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e758"
+        },
+        {
+          "slot_time": "01:30",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e759"
+        },
+        {
+          "slot_time": "02:00",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e75a"
+        },
+        {
+          "slot_time": "02:30",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e75b"
+        },
+        {
+          "slot_time": "03:00",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e75c"
+        },
+        {
+          "slot_time": "03:30",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e75d"
+        },
+        {
+          "slot_time": "04:00",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e75e"
+        },
+        {
+          "slot_time": "04:30",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e75f"
+        },
+        {
+          "slot_time": "05:00",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e760"
+        },
+        {
+          "slot_time": "05:30",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e761"
+        },
+        {
+          "slot_time": "06:00",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e762"
+        },
+        {
+          "slot_time": "06:30",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e763"
+        },
+        {
+          "slot_time": "07:00",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e764"
+        },
+        {
+          "slot_time": "07:30",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e765"
+        },
+        {
+          "slot_time": "08:00",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e766"
+        },
+        {
+          "slot_time": "08:30",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e767"
+        },
+        {
+          "slot_time": "09:00",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e768"
+        },
+        {
+          "slot_time": "09:30",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e769"
+        },
+        {
+          "slot_time": "10:00",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e76a"
+        },
+        {
+          "slot_time": "10:30",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e76b"
+        },
+        {
+          "slot_time": "11:00",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e76c"
+        },
+        {
+          "slot_time": "11:30",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e76d"
+        },
+        {
+          "slot_time": "12:00",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e76e"
+        },
+        {
+          "slot_time": "12:30",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e76f"
+        },
+        {
+          "slot_time": "13:00",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e770"
+        },
+        {
+          "slot_time": "13:30",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e771"
+        },
+        {
+          "slot_time": "14:00",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e772"
+        },
+        {
+          "slot_time": "14:30",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e773"
+        },
+        {
+          "slot_time": "15:00",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e774"
+        },
+        {
+          "slot_time": "15:30",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e775"
+        },
+        {
+          "slot_time": "16:00",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e776"
+        },
+        {
+          "slot_time": "16:30",
+          "total_slots": 0,
+          "avaible_slots": 0,
+          "booked_slots": 0,
+          "_id": "633d7b6e385a98fa4668e777"
+        }
+      ],
+      "created_time": "2022-10-05T12:41:16.720Z",
+      "updated_time": "2022-10-05T12:41:16.720Z",
+      "__v": 0
+    }
+  ],
+  "msg": "Success"
+}
+
